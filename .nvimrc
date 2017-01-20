@@ -35,6 +35,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'nathanalderson/yang.vim'
 Plug 'mfukar/robotframework-vim'
 Plug 'mhinz/vim-grepper'
+Plug 'pearofducks/ansible-vim'
 
 call plug#end()
 
