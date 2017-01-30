@@ -15,4 +15,7 @@ ln -s .environment/.nvimrc ~/.config/nvim/init.vim
 # sudo yum -y install neovim
 # curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# sudo yum install python34-setuptools
+# sudo easy_install-3.4 pip
+# pip3 install neovim
 ```
