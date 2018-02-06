@@ -1,5 +1,11 @@
 let g:python3_host_prog='/usr/bin/python3'
-let g:deoplete#sources#jedi#python_path='/usr/bin/python3'
+let g:deoplete#sources#jedi#python_path='/usr/bin/python3.6'
+let g:neomake_python_pylint_exe = 'pylint3.6'
+
+"let g:python3_host_prog='/usr/bin/python'
+"let g:deoplete#sources#jedi#python_path='/usr/bin/python'
+"let g:neomake_python_pylint_exe = 'pylint'
+
 set mouse=
 
 " Fix conflict between pydocstring and tmuxnavigate
@@ -36,6 +42,9 @@ Plug 'nathanalderson/yang.vim'
 Plug 'mfukar/robotframework-vim'
 Plug 'mhinz/vim-grepper'
 Plug 'pearofducks/ansible-vim'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 call plug#end()
 
@@ -53,10 +62,14 @@ au! Syntax python set tabstop=4
 au! Syntax python set softtabstop=4
 au! Syntax python set shiftwidth=4
 
-" Python has to get 4 spaces
+" Yang has to get 2 spaces
 au! Syntax yang set tabstop=2
 au! Syntax yang set softtabstop=2
 au! Syntax yang set shiftwidth=2
+
+au! Syntax yaml set tabstop=2
+au! Syntax yaml set softtabstop=2
+au! Syntax yaml set shiftwidth=2
 
 let g:deoplete#enable_at_startup = 1
 

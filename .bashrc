@@ -57,7 +57,8 @@ my_rift_prompt() {
 }
 
 PROMPT_COMMAND=my_rift_prompt
-export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 #export PATH=/net/strange/localdisk/acormier/3-11-xpullnomerge/git/rift-submodule-tools:$PATH
 export PYTHONSTARTUP=~/.pythonrc.py
 #export VIMRUNTIME="/net/boson/home1/acormier/neovim/share/nvim/runtime"
