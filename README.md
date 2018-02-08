@@ -1,12 +1,12 @@
 ```
 cd ~
 git clone https://github.com/astnbomb/environment.git .environment
-ln -sf .environment/.bashrc
-ln -sf .environment/.tmux.conf
-ln -sf .environment/.bash_alias
-ln -sf .environment/scripts
+ln -sf ~/.environment/.bashrc
+ln -sf ~/.environment/.tmux.conf
+ln -sf ~/.environment/.bash_alias
+ln -sf ~/.environment/scripts
 mkdir -p ~/.config/nvim
-ln -s .environment/.nvimrc ~/.config/nvim/init.vim
+ln -s ~/.environment/.nvimrc ~/.config/nvim/init.vim
 
 
 #install neovim on centos

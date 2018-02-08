@@ -23,7 +23,7 @@ call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeFind' }
 Plug 'flazz/vim-colorschemes'
-Plug 'taglist.vim', { 'on': 'TlistToggle' }
+Plug 'vim-scripts/taglist.vim', { 'on': 'TlistToggle' }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
