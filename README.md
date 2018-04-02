@@ -7,6 +7,7 @@ ln -sf .environment/.bash_alias
 ln -sf .environment/scripts
 mkdir -p ~/.config/nvim
 ln -s .environment/.nvimrc ~/.config/nvim/init.vim
+ln -s .environment/pydocstring/ ~/.config/nvim/pydocstring
 
 
 #install neovim on centos

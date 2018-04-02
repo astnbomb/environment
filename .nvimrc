@@ -45,6 +45,7 @@ Plug 'pearofducks/ansible-vim'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'rdolgushin/groovy.vim'
 
 call plug#end()
 
@@ -100,6 +101,9 @@ let g:neomake_open_list=0
 let g:neomake_serialize_abort_on_error=1
 let g:neomake_serialize=1
 autocmd BufWritePost *.py :Neomake pylint
+
+
+let g:pydocstring_templates_dir = '~/.config/nvim/pydocstring'
 
 colorscheme zenburn
 
