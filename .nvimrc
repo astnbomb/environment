@@ -1,6 +1,6 @@
-let g:python3_host_prog='/usr/bin/python3'
+let g:python3_host_prog='/usr/bin/python3.6'
 let g:deoplete#sources#jedi#python_path='/usr/bin/python3.6'
-let g:neomake_python_pylint_exe = 'pylint3.6'
+let g:neomake_python_pylint_exe = 'pylint'
 
 "let g:python3_host_prog='/usr/bin/python'
 "let g:deoplete#sources#jedi#python_path='/usr/bin/python'
