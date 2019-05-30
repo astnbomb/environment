@@ -1,5 +1,5 @@
-let g:python3_host_prog='/usr/bin/python3.6'
-let g:deoplete#sources#jedi#python_path='/usr/bin/python3.6'
+let g:python3_host_prog='python3.6'
+let g:deoplete#sources#jedi#python_path='python'
 let g:neomake_python_pylint_exe = 'pylint'
 
 "let g:python3_host_prog='/usr/bin/python'
@@ -85,15 +85,15 @@ let Tlist_Exit_OnlyWindow = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30'
-let g:ctrlp_max_files = 1000
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|build|install|release)$'
+let g:ctrlp_max_files = 150000
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|build|install|release|latest|src|latest|debug_gcc)$'
 let g:ctrlp_root_markers = ['128.cmake', '.bashrc']
 if executable("ag")
   set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''build'' --ignore ''release'' --ignore ''.install'' --ignore --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''src'' --ignore ''latest'' --ignore ''debug_gcc'' --ignore ''build'' --ignore ''release'' --ignore ''.install'' --ignore --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
 endif
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_lazy_update = 350
+let g:ctrlp_lazy_update = 500
 
 let g:neomake_python_enable_makers = ['pylint']
 let g:neomake_python_pylint_args = ["-d", "line-too-long,too-few-public-methods,missing-docstring,invalid-name,bad-continuation,too-many-arguments"] + neomake#makers#ft#python#pylint()['args']
@@ -184,5 +184,8 @@ endfunction "}}}
 
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
+
+filetype indent off
+set smartindent
 
 " vim: set ts=2 sw=2 tw=80 noet :

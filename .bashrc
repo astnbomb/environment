@@ -72,8 +72,8 @@ function debug_utest(){
 export DEBEMAIL="austin.cormier@riftio.com"
 export DEBFULLNAME="Austin Cormier"
 
-export LC_ALL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
+#export LC_ALL="en_US.UTF-8"
+#export LC_CTYPE="en_US.UTF-8"
 #
 if [ -f $HOME/bin/git-completion.bash ]; then
    source $HOME/bin/git-completion.bash
@@ -83,3 +83,9 @@ if [ -f $HOME/bin/git-prompt.sh ]; then
    source $HOME/bin/git-prompt.sh
    PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 fi
+
+alias pyclean="find . -name \*.pyc -o -name \*.pyo -o -name __pycache__ | xargs -i rm -rf {}"
+
+export WORKON_HOME=~/Envs
+mkdir -p $WORKON_HOME
+source /usr/bin/virtualenvwrapper.sh
