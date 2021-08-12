@@ -1,4 +1,4 @@
-let g:python3_host_prog='python3.6'
+let g:python3_host_prog='python'
 let g:deoplete#sources#jedi#python_path='python'
 let g:neomake_python_pylint_exe = 'pylint'
 
@@ -24,11 +24,12 @@ call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeFind' }
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-scripts/taglist.vim', { 'on': 'TlistToggle' }
+Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'heavenshell/vim-pydocstring'
+Plug 'heavenshell/vim-pydocstring', {'tag': '1.0.0'}
 Plug 'benekastah/neomake'
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-jedi'
@@ -46,6 +47,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'rdolgushin/groovy.vim'
+Plug 'itspriddle/vim-shellcheck'
 
 call plug#end()
 
@@ -87,7 +89,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30'
 let g:ctrlp_max_files = 150000
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|build|install|release|latest|src|latest|debug_gcc)$'
-let g:ctrlp_root_markers = ['128.cmake', '.bashrc']
+let g:ctrlp_root_markers = ['.bashrc', '128T.spec.in']
 if executable("ag")
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''src'' --ignore ''latest'' --ignore ''debug_gcc'' --ignore ''build'' --ignore ''release'' --ignore ''.install'' --ignore --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
@@ -107,8 +109,8 @@ let g:pydocstring_templates_dir = '~/.config/nvim/pydocstring'
 
 colorscheme zenburn
 
-map <F7> :NERDTreeFind<CR>
-map <F8> :TlistToggle<CR>
+map <F3> :NERDTreeFind<CR>
+map <F4> :TlistToggle<CR>
 
 "  move text and rehighlight -- vim tip_id=224
 vnoremap > ><CR>gv
@@ -128,9 +130,9 @@ tnoremap <Esc> <C-\><C-n>
 set completeopt+=noinsert,noselect
 
 " Use auto delimiter
-call deoplete#custom#set('_', 'converters',
-  \ ['converter_auto_paren',
-  \  'converter_auto_delimiter', 'remove_overlap'])
+"call deoplete#custom#set('_', 'converters',
+""  \ ['converter_auto_paren',
+""  \  'converter_auto_delimiter', 'remove_overlap'])
 
 let g:deoplete#keyword_patterns = {}
 let g:deoplete#keyword_patterns._ = '[a-zA-Z_]\k*\(?'
