@@ -1,5 +1,5 @@
-let g:python3_host_prog='python'
-let g:deoplete#sources#jedi#python_path='python'
+let g:python3_host_prog='python3'
+let g:deoplete#sources#jedi#python_path='python3'
 let g:neomake_python_pylint_exe = 'pylint'
 
 "let g:python3_host_prog='/usr/bin/python'
@@ -134,8 +134,8 @@ set completeopt+=noinsert,noselect
 ""  \ ['converter_auto_paren',
 ""  \  'converter_auto_delimiter', 'remove_overlap'])
 
-let g:deoplete#keyword_patterns = {}
-let g:deoplete#keyword_patterns._ = '[a-zA-Z_]\k*\(?'
+"let g:deoplete#keyword_patterns = {}
+"et g:deoplete#keyword_patterns._ = '[a-zA-Z_]\k*\(?'
 
 let g:deoplete#sources#go = 'vim-go'
 

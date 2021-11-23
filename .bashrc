@@ -13,6 +13,7 @@ fi
 
 # Bash History
 shopt -s histappend
+export EDITOR=vim
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 HISTCONTROL=ignoreboth
